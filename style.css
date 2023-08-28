@@ -1,9 +1,47 @@
-body{
+body {
     background-color: #141414;
 }
 
 /* NAVBAR */
 
-body>header>.container>.row>.navbar{
-    background-color:#141414 ;
+body>header>.container>.row>.navbar {
+    background-color: #141414;
+}
+
+/* resize logo img brand */
+body>header>div>div>nav>a>img {
+    width: 6rem;
+}
+
+/* resize fontsize scritta KIDS */
+#categories {
+    font-size: 1rem;
+}
+
+/* colore freccetta menu dropdown user */
+#navbarSupportedContent>div>div.col.dropdown.p-0>a::after {
+    color: white;
+    inset: 3px 3px;
+    position: relative;
+}
+
+/* Title e Icon section */
+
+/* dimensioni icone sulla destra */
+body>main>div.container-fluid.ml-2>div>div.row.align-items-center.no-gutters.text-white.ml-5.pl-5>div>button {
+
+    width: 3rem;
+    height: 2.2rem;
+}
+
+/* creo linea per icona */
+body > main > div.container-fluid.ml-2 > div > div.row.align-items-center.no-gutters.text-white.ml-5.pl-5 > div:nth-child(1) > button::before{
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0 ;
+    color: white;
+    width: 3rem;
+    height: 2rem;
+    
+    
 }
