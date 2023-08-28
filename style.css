@@ -62,7 +62,7 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
     width: 111%;
 }
 .carousel-inner{
-    overflow: visible;
+    /* overflow: visible; */
     left: 15px;
 }
 
