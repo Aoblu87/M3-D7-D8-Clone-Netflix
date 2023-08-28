@@ -10,7 +10,13 @@ body>header>.container>.row>.navbar {
 
 /* resize logo img brand */
 body>header>div>div>nav>a>img {
-    width: 6rem;
+    width: 6.7rem;
+}
+
+/* dimesioni logo collapse navbar */
+
+.navbar>button>img{
+    width: 2rem;
 }
 
 /* resize fontsize scritta KIDS */
@@ -28,20 +34,37 @@ body>header>div>div>nav>a>img {
 /* Title e Icon section */
 
 /* dimensioni icone sulla destra */
-body>main>div.container-fluid.ml-2>div>div.row.align-items-center.no-gutters.text-white.ml-5.pl-5>div>button {
+body>main>.container-fluid>div>.row>div>button {
 
     width: 3rem;
     height: 2.2rem;
 }
 
 /* creo linea per icona */
-body > main > div.container-fluid.ml-2 > div > div.row.align-items-center.no-gutters.text-white.ml-5.pl-5 > div:nth-child(1) > button::before{
+body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
     content: "";
     position: absolute;
-    inset: 0 0 0 0 ;
+    inset: 0 0 0 0;
     color: white;
     width: 3rem;
     height: 2rem;
-    
-    
+
+
 }
+
+/* CAROSELLO */
+
+.card-body{
+    display: none;
+}
+
+.carousel-item{
+    width: 111%;
+}
+.carousel-inner{
+    overflow: visible;
+    left: 15px;
+}
+
+
+
