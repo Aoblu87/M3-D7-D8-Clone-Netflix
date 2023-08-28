@@ -1,0 +1,9 @@
+body{
+    background-color: #141414;
+}
+
+/* NAVBAR */
+
+body>header>.container>.row>.navbar{
+    background-color:#141414 ;
+}
