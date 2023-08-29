@@ -3,11 +3,11 @@ body {
     font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
 }
 
-.bi{
+.bi {
     cursor: pointer;
 }
 
-main>.container-fluid{
+main>.container-fluid {
     margin-top: 1rem;
     z-index: 1;
 }
@@ -72,6 +72,7 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
     position: relative;
     left: 13px;
 }
+
 .carousel-inner {
     position: relative;
     width: 100%;
@@ -96,6 +97,7 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
 .carousel-item:hover {
     z-index: 2;
 }
+
 .carousel-item .card .card-body {
     opacity: 0;
     position: absolute;
@@ -117,7 +119,28 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
 .carousel-item .card {
     cursor: pointer;
     transform: scale(1);
-    transition: transform, 0.55s ease-in-out;
+    transition: transform, 0.5s ease-in-out;
+    opacity: 0;
+    animation: fade-in 2s ease-in-out forwards;
+    animation-delay: 4s;
+}
+.container-fluid {
+    transform: scale(1);
+    transition: transform, 0.5s ease-in-out;
+    opacity: 0;
+    animation: fade-in 2s ease-in-out forwards;
+    animation-delay: 4s;
+}
+
+/* Per far apparire le card dopo lo screen splash */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .carousel-item .card:hover {
@@ -130,18 +153,43 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
 
 }
 
-/* .carousel-item:hover {
 
-    transition: transform, 0.75s ease-in-out;
-
-} */
 .carousel-inner {
     overflow: hidden;
 }
 
 
+/* Splash screen */
+.overlay {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    background-image: url(assets/imgs/netflix-splash-screen.gif);
+    background-size: cover;
+    animation-name: splash-screen;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+@keyframes splash-screen {
+    from {
+        opacity: 0;
+        z-index: -1;
+    }
+
+    to {
+        opacity: 1;
+        z-index: 2;
+    }
+
+}
+
+
 
 /* FOOTER */
-footer > div > div:nth-child(2)>.col-12>a{
+footer>div>div:nth-child(2)>.col-12>a {
     color: #f8f9fa;
 }
