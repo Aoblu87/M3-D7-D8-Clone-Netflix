@@ -70,8 +70,20 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
 }
 
 /* TRANSIZIONE su Hover */
-.card-body {
+.carousel-item .card .card-body {
     opacity: 0;
+    position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.75s ease-in-out;
+    -webkit-box-shadow: 0px 0px 13px 1px rgba(NaN, 14, NaN, 1);
+    -moz-box-shadow: 0px 0px 13px 1px rgba(NaN, 14, NaN, 1);
+    box-shadow: 0px 0px 13px 1px rgba(150, 142, 150, 1);
+}
+.carousel-item .card:hover .card-body {
+    opacity: 1;
 }
 
 .carousel-item .card {
