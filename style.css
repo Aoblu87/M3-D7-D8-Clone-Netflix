@@ -9,9 +9,6 @@ body {
     cursor: pointer;
 }
 
-main>.container-fluid {
-    margin-top: 1rem;
-}
 
 /* NAVBAR */
 
@@ -90,13 +87,14 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
 }
 
 .carousel-item:hover {
-    z-index: 5;
+    z-index: 2;
     transition: all 0.75s ease-in-out;
 
 }
 
 .carousel-item .card .card-body {
     opacity: 0;
+    background: black;
     position: absolute;
     top: 109%;
     left: 0;
@@ -119,7 +117,7 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
     cursor: pointer;
     transform: scale(1);
     transition: transform, 0.5s ease-in-out;
-    opacity: 0;
+    opacity: 1;
     animation: fade-in 3s ease-in-out forwards;
     animation-delay: 5s;
     
@@ -142,15 +140,17 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
 
 /* --------------Splash screen */
 .container-fluid {
-    transform: scale(1);
-    transition: transform, 0.5s ease-in-out;
-    opacity: 0;
-    animation: fade-in 3s ease-in-out forwards;
-    animation-delay: 5s;
+    margin-top: 1rem;
+    /* transform: scale(1);
+    transition: transform, 0.5s ease-in; */
+    /* opacity: 0; */
+    /* animation: fade-in 3s ease-in-out forwards;
+    animation-delay: 5s; */
+    /* z-index: 1; */
 }
 
 /* Per far apparire le card dopo lo screen splash */
-@keyframes fade-in {
+/* @keyframes fade-in {
     from {
         opacity: 0;
     }
@@ -158,7 +158,7 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
     to {
         opacity: 1;
     }
-}
+}  */
 .overlay {
     position: fixed;
     inset: 0;
@@ -166,22 +166,24 @@ body>main>.container-fluid>div>.row>div:nth-child(1)>button::before {
     background-image: url(assets/imgs/netflix-splash-screen.gif);
     background-size: cover;
     animation-name: splash-screen;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-direction: alternate
+;
+    animation-fill-mode: backwards;
 }
 
 @keyframes splash-screen {
     from{
-        opacity: 0;
-        z-index: -1;
+        opacity: 1;
+        z-index: 3;
     }
   
     to {
-        opacity: 1;
-        z-index: 1;
+        opacity: 0;
+        z-index: 2;
     }
 
 }
