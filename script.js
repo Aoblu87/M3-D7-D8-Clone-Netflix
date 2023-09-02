@@ -1,14 +1,28 @@
 const body= document.querySelector('body')
-const elements= document.querySelector('.container-fluid')
+const element= document.querySelector('[data-target=carousel]')
 
 
 window.onload= function(){
     
     
-    function smooth(){
+// window.addEventListener('scroll', function(event){
 
-        element.scrollIntoView({behavior: 'smooth'})
-    }
+    
+        function scrollSection(){
+
+            element.scrollIntoView(true);
+        }
+        scrollSection()
+        // element.scrollTo({
+        //     top: 0,
+        //     left: 0,
+        //     behavior: "smooth",
+        //   });
+
+    
+
+// })
+
     
 }
 
