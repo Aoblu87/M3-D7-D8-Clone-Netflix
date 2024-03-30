@@ -1,0 +1,195 @@
+body {
+  background-color: #141414;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  z-index: 0;
+  height: 100%;
+}
+
+.bi {
+  cursor: pointer;
+}
+
+/* NAVBAR */
+body > header > .container > .row > .navbar {
+  background-color: #141414;
+}
+
+/* resize logo img brand */
+body > header > div > div > nav > a > img {
+  width: 6.7rem;
+}
+
+/* dimesioni logo collapse navbar */
+.navbar > button > img {
+  width: 2rem;
+}
+
+/* resize fontsize scritta KIDS */
+#categories {
+  font-size: 1rem;
+}
+
+/* colore freccetta menu dropdown user */
+#navbarSupportedContent > div > div.col.dropdown.p-0 > a::after {
+  color: white;
+  inset: 3px 3px;
+  position: relative;
+}
+
+/* Title e Icon section */
+/* dimensioni icone sulla destra */
+body > main > .container-fluid > div > .row > div > button {
+  width: 3rem;
+  height: 2.2rem;
+}
+
+/* creo linea per icona */
+body > main > .container-fluid > div > .row > div:nth-child(1) > button::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0;
+  color: white;
+  width: 3rem;
+  height: 2rem;
+}
+
+/* CAROSELLO */
+.carousel-control-next {
+  right: 0;
+  width: 2rem;
+}
+
+.container-fluid {
+  margin-top: 1rem;
+}
+
+.row-cards {
+  gap: 0.5rem;
+}
+
+.carousel.slide > .carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.carousel-item {
+  width: 45%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.75s ease-in-out;
+}
+
+.carousel-item:hover {
+  z-index: 2;
+  transition: all 0.75s ease-in-out;
+}
+
+.carousel-item .card .card-body {
+  opacity: 0;
+  padding: 0;
+  background: black;
+  width: 100%;
+  position: absolute;
+  top: 109%;
+  left: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.55s ease-in-out;
+  box-shadow: 0px 0px 13px 1px rgb(150, 142, 150);
+}
+
+.carousel-item .card:hover .card-body {
+  opacity: 1;
+  transform: translateY(-10px);
+  pointer-events: unset;
+}
+
+.carousel-item .card {
+  transform: scale(1);
+  transition: transform, 0.5s ease-in-out;
+}
+
+.carousel-item .card:hover {
+  transform: scale(1.05);
+  transition: transform, 2s ease-in-out;
+  box-shadow: 0px 0px 13px 1px rgb(150, 142, 150);
+  cursor: pointer;
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-item .card .card-body .card-text {
+  padding-block: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-control-next {
+    top: -20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .card-body {
+    display: none;
+  }
+}
+/* ---------CARD BODY Stile */
+.card .cardbody .card-text {
+  position: relative;
+}
+
+/* --------------Splash screen */
+/* Per far apparire le card dopo lo screen splash */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  background-image: url(assets/imgs/netflix-splash-screen.gif);
+  background-size: cover;
+  animation-name: splash-screen;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+}
+
+@keyframes splash-screen {
+  from {
+    opacity: 1;
+    z-index: 3;
+  }
+  to {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+/* Nascondere la scrooll bar durante l'animazione splash screen */
+body {
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* FOOTER */
+footer > div > div:nth-child(2) > .col-12 > a {
+  color: #f8f9fa;
+}/*# sourceMappingURL=style.css.map */
