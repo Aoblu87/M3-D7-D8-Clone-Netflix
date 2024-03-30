@@ -21,4 +21,6 @@ By integrating these technologies, we've managed to craft an application that no
 - **Asynchronous Data Loading** - Content is loaded dynamically, reducing initial load times and improving the user experience.
 
 
-![127 0 0 1_5501_](https://github.com/Aoblu87/M3-D7-D8-Clone-Netflix/assets/126720391/534d2af4-1e1c-4945-8233-449066586d7c=500X1200)
+![127 0 0 1_5501_ (2)](https://github.com/Aoblu87/M3-D7-D8-Clone-Netflix/assets/126720391/eddb4557-7310-495b-a5e7-650dd36a3fc4=500X1200)
+
+
