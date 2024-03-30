@@ -152,7 +152,7 @@ body > main > .container-fluid > div > .row > div:nth-child(1) > button::before 
   position: fixed;
   inset: 0;
   opacity: 0;
-  background-image: url(assets/imgs/netflix-splash-screen.gif);
+  background-image: url(.././assets/imgs/netflix-splash-screen.gif);
   background-size: cover;
   animation-name: splash-screen;
   animation-duration: 3s;

@@ -79,7 +79,6 @@ function generateCards(selector) {
   for (const container of containers) {
     container.innerHTML = moviesHTML;
   }
-  console.log(moviesHTML);
   // Trigger dell'evento personalizzato 'destinationsRendered' una volta terminato il rendering
   window.dispatchEvent(new CustomEvent('cardsRendered'));
 }
